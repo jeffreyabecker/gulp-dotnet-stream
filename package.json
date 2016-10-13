@@ -1,0 +1,28 @@
+{
+  "name": "gulp-dotnet-stream",
+  "version": "0.0.9",
+  "description": "dotnet plugin for gulp. Inspired by gulp-msdeploy and gulp-dotnet.",
+  "keywords": [
+    "gulpplugin",
+    "dotnet"
+  ],
+  "author": "Jeff Becker <jeffrey.a.becker@gmailc.om",
+  "repository": "jeffreyabecker/gulp-dotnet-stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "through2": "^2.0.0",
+    "child_process": "^1.0.2"
+  },
+  "devDependencies": {
+
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT"
+}

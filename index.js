@@ -12,9 +12,12 @@ function _flattenOptions(optionsArr){
         let val = optionsArr[i];
         if(typeof val === 'object'|| val instanceof Object){
             for(let k in val){
-                if(val.hasOwnProperty(k) && val[k] !== undefined){
+                if(val.hasOwnProperty(k)){
                     result.push(k);
-                    result.push(val[k]);
+                    let propval = val[k];
+                    if(propval !== undefined && propval !==null && propval !== ""){
+                        result.push(val[k]);
+                    }
                 }
             }
         } 

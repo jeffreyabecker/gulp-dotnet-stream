@@ -1,6 +1,6 @@
 {
   "name": "gulp-dotnet-stream",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "dotnet plugin for gulp. Inspired by gulp-msdeploy and gulp-dotnet.",
   "keywords": [
     "gulpplugin",

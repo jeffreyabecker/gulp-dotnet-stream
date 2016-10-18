@@ -12,17 +12,16 @@ function _flattenOptions(optionsArr){
         let val = optionsArr[i];
         if(typeof val === 'object'|| val instanceof Object){
             for(let k in val){
-                if(val.hasOwnProperty(k)){
+                if(val.hasOwnProperty(k) && val[k] !== undefined){
                     result.push(k);
-                    let propval = val[k];
-                    if(propval !== undefined && propval !==null && propval !== ""){
-                        result.push(val[k]);
-                    }
+                    result.push(val[k]);
                 }
             }
         } 
         else{
-            result.push(val);
+            if(val !== undefined ){
+                result.push(val);
+            }
         }
     }
     return result;
@@ -96,6 +95,7 @@ module.exports = {
             }
 
             let args = _flattenOptions(['test', options, file.path]);
+            console.log(args.join(', '));
             let cmd = proc.spawn('dotnet', args);
             cmd.stdout.pipe(process.stdout);
             cmd.stderr.pipe(process.stderr);
